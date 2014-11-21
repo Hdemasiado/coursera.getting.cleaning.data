@@ -1,6 +1,6 @@
 coursera.getting.cleaning.data
 ==============================
-Creation of a set of tidy data from wearable computing data coming from: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+ Creation of a set of tidy data from wearable computing data coming from: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 there are 3 files in this repository
 
@@ -31,24 +31,24 @@ It follows the goals step by step.
 ◦Combines the files to a data frame in the form of subjects, labels, the rest of the data.
 
 • Step 2:
-◦Reads features from features.txt
-◦Filters to leave features that are either means ("mean()") or standard deviations ("std()"). 
-◦A new data frame is then created that includes subjects, labels and the described features.
+Reads features from features.txt
+Filters to leave features that are either means ("mean()") or standard deviations ("std()"). 
+A new data frame is then created that includes subjects, labels and the described features.
 
 • Step 3:
-◦Reads  activity labels from activity_labels.txt
-◦Replaces the numbers with the text.
+Reads  activity labels from activity_labels.txt
+Replaces the numbers with the text.
 
 • Step 4:
-◦Make a column list (includig "subjects" and "label" at the start)
-◦Tidy-fy the list by removing all non-alphanumeric characters and converting the result to lowercase
-◦Apply the now-good-columnnames to the data frame
+Make a column list (includig "subjects" and "label" at the start)
+Tidy-fy the list by removing all non-alphanumeric characters and converting the result to lowercase
+Apply the now-good-columnnames to the data frame
 
 • Step 5:
-◦Creation of a new data frame. The data frame is created looking for the mean of each combination of subject and label
-◦The function in use is the aggregate()  function
+Creation of a new data frame. The data frame is created looking for the mean of each combination of subject and label
+The function in use is the aggregate()  function
 
 • Final step:
-◦The tidy data set is created with the name tidyData.txt
+The tidy data set is created with the name tidyData.txt
 
 
