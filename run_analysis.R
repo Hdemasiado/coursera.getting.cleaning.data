@@ -11,9 +11,8 @@ train_data <- read.table("train/X_train.txt")
 data <- rbind(cbind(test_subjects, test_labels, test_data), cbind(train_subjects, train_labels, train_data)) 
 
 # step 2 
-# file with features (features.txt) is read 
+# file with features (features.txt) is read and we keep only mean and standard deviation
 features <- read.table("features.txt", strip.white=TRUE, stringsAsFactors=FALSE) 
-# keep onlyl features of mean and standard deviation 
 features_mean_std <- features[grep("mean\\(\\)|std\\(\\)", features$V2), ] 
 
 
@@ -22,9 +21,8 @@ features_mean_std <- features[grep("mean\\(\\)|std\\(\\)", features$V2), ]
 data_mean_std <- data[, c(1, 2, features_mean_std$V1+2)] 
 
 # step 3 
-# read the labels from activities_labels.txt file
+# read the labels from activities_labels.txt file and replace labels in original data with label names
 labels <- read.table("activity_labels.txt", stringsAsFactors=FALSE) 
-# replace labels in data with label names 
 data_mean_std$label <- labels[data_mean_std$label, 2] 
 
 # step 4 
