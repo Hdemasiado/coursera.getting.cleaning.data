@@ -3,8 +3,11 @@ coursera.getting.cleaning.data
 Creation of a set of tidy data from wearable computing data coming from: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
 there are 3 files in this repository
+
 •README.md -- you are reading it right now
+
 •CodeBook.md -- codebook describing variables, the data and transformations
+
 •run_analysis.R -- actual R code
 
 run_analysis.R objective:
